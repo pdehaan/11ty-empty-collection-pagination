@@ -1,0 +1,13 @@
+---
+# If `events` is an empty array, no files will be written.
+pagination:
+  data: events
+  size: 1
+  alias: event
+# This will write permalinks like /events/, /events/1/, /events/2/, etc.
+---
+
+<p>title={{ event.title }}</p>
+<p>date={{ event.date | locale_date }}</p>
+<p>url={{ page.url }}</p>
+<p>tags={{ tags | json_stringify(0) | safe }}</p>
