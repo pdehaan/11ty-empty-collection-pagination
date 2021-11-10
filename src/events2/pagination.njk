@@ -1,10 +1,9 @@
 ---
-# If `events` is an empty array, no files will be written.
 pagination:
   data: events
   size: 1
   alias: event
-# This will write permalinks like /events/, /events/1/, /events/2/, etc.
+permalink: "events2/{{ event.title | slug }}/"
 ---
 
 <h1>title={{ event.title }}</h1>
